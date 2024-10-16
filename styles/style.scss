@@ -1,0 +1,1424 @@
+@import 'navbar';
+
+
+
+*{
+    font-family: 'Noto Sans', 'sans-serif';
+}
+
+
+//navbar section
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    position: relative;
+
+    @include tablet{
+        .navbar_bars {
+            display: block;
+        }
+    
+        .navbar_menu {
+            padding: 30px 0px;
+            font-size: 1.2rem;    
+            gap: 40px;
+            font-weight: 400;
+            display: flex;
+            height: 100vh;
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            z-index: 1000;
+        }
+
+        .navbar_menu:hover{
+            color: $primaryColor;
+        }
+    
+        .navbar_menu.slide-toggle {
+            display: flex;
+        }
+    
+        .navbar_links {
+            padding: 15px 20px;
+            text-decoration: none;
+          
+        }
+    }
+}
+.logo_navbar img {
+    height: 40px;
+}
+
+.navbar_bars {
+    display: none;
+}
+.navbar_menu {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar_menu a {
+    text-decoration: none;
+    color: $dark;
+}
+//Hero Section 
+.logo_navbar img{
+    width: 280px;
+    height: 100px;
+}
+#bg_hero{background-color: $secondaryColor;}
+#hero{
+    background-color: $mediumLight;
+    border-bottom-right-radius: 75px; 
+    .hero_container{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            width: 120vw;
+            padding: 70px 0px;
+            height:65vh;
+
+        }
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            gap: 5vw;
+            width: 150vw;
+            padding: 70px 0px;
+            height:65vh;
+
+        }
+
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            width: 150vw;
+            height:95vh;
+        }
+
+        @include medium-screen{
+            display: flex;
+            flex-direction: column;
+            width: 150vw;
+            height:96vh;
+        }
+
+        @mixin medium-large-screen {
+            display: flex;
+            flex-direction: column;
+            width: 150vw;
+            height:100vh;
+        }
+    }
+}
+
+.left-hero{
+    @include tablet{
+        margin:20px 0px;
+        object-fit: cover;
+    }
+
+    @include desktop{
+        border-bottom-left-radius: 75px; 
+        background-color: $secondaryColor;
+        margin: 0px 0px 0px 40px;
+        padding-left: 35px;
+        width: 45vw; 
+        height: 45vh;
+  
+        img{
+            border-bottom-left-radius: 75px; 
+            height: 45vh;
+            object-fit: cover;
+        }
+    }
+
+    @include mobile{
+        border-bottom-left-radius: 75px; 
+        background-color: $secondaryColor;
+        margin: 0px 0px 0px 10px;
+        padding-left: 35px;
+        width: 89vw; 
+        height: 45vh;
+    
+         
+        img{
+            border-bottom-left-radius: 75px; 
+            height: 45vh;
+            width: 90vw;
+            object-fit: cover;
+        }
+    }
+
+    @include medium-screen{
+        border-bottom-left-radius: 75px; 
+        background-color: $secondaryColor;
+        margin: 0px 0px 0px 10px;
+        padding-left: 35px;
+        width: 89vw; 
+        height: 45vh;
+        img{
+            border-bottom-left-radius: 75px; 
+            height: 45vh;
+            width: 89vw; 
+            object-fit: cover;
+        }
+    }
+}
+
+.right-hero{
+
+    @include desktop{
+        width: 40vw;
+        line-height: 2;
+    
+        h1{
+            color: $primaryColor;
+            font-size: 1.9rem;
+        }
+        p{
+            line-height: 3;
+            font-weight: 600;
+        }   
+    }
+
+    @include tablet{
+        padding:0px 22px 0px 0px;
+        h1{
+            color: $primaryColor;
+            font-size: 1.7rem;
+            line-height: 1.7;
+            margin-bottom:24px;
+            
+        }
+        p{  
+            line-height: 2;
+            font-weight: 600;
+            font-size:0.909rem;
+        }   
+    
+    }
+    @include mobile{
+        width: 90vw;
+        padding-left: 35px;
+        h1{
+            text-align: center;
+            font-size:1.5rem;
+        }
+        p{
+            text-align: center;
+            font-size:1rem;
+        }
+        
+    }
+
+    @include medium-screen{
+        width: 98vw;
+      
+        text-align: center;
+        padding:0px 22px 0px 22px;
+        h1{
+            color: $primaryColor;
+            font-size: 1.7rem;
+            line-height: 1.7;
+            margin-bottom:24px;
+            
+        }
+        p{  
+            line-height: 2;
+            font-weight: 600;
+            font-size:0.909rem;
+        } 
+        
+    }
+
+    @include medium-large-screen{
+        h1{
+          
+            font-size:1.4rem;
+        }
+        p{
+          
+            font-size:1rem;
+        }
+    }
+}
+
+//About Section
+#bg_about{
+    background-color: $mediumLight; 
+
+}
+.about{
+    background-color: $secondaryColor;
+
+ 
+
+    @include desktop{
+        .about_info{
+            
+            padding: 60px 60px 0px 45px;
+            margin:50px 80px 0px 100px;
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            color:white;
+            text-align: center;
+            font-weight: 200;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            height: 80vh;
+            button{
+            background-color: $secondaryColor;
+            border:1.4px solid white;
+            color:white;
+            padding: 12px 32px;
+            border-radius: 10px;
+
+            }
+            span{
+                font-size:0.9rem;
+            }
+
+            p{
+                margin:30px 0px;
+                font-size: 1rem;
+                font-weight: 350;
+            }
+
+            img{
+                margin: 45px 0px;
+                width: 65vw;
+                height: 50vh;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include tablet{
+            .about_info{
+                margin: 0 60px 0px 70px;
+                display: flex;
+                flex-direction: column;
+                width: 80vw;
+                color:white;
+                text-align: center;
+                font-weight: 200;
+                justify-content: center;
+                align-items: center;
+                justify-items: center;
+    
+                h1{
+                    margin: 100px 0px 0px 0px;
+                }
+    
+                button{
+                background-color: $secondaryColor;
+                border:1.4px solid white;
+                color:white;
+                padding: 12px 32px;
+                border-radius: 10px;
+    
+                }
+                span{
+                    font-size:0.9rem;
+                }
+    
+                p{
+                    margin:30px 0px;
+                    font-size: 1rem;
+                    font-weight: 350;
+                }
+
+            
+                img{
+                    margin: 45px 0px;
+                    width: 65vw;
+                    height: 30vh;
+                    border-radius: 20px;
+                    object-fit: cover;
+                }
+        }
+    }
+
+    @include medium-screen{
+        .about_info{
+            padding: 50px 10px 0px 30px;
+            margin:0px 20px 30px 30px;
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            color:white;
+            text-align: center;
+            font-weight: 200;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+
+            button{
+            background-color: $secondaryColor;
+            border:1.4px solid white;
+            color:white;
+            padding: 12px 32px;
+            border-radius: 10px;
+
+            }
+            span{
+                font-size:0.9rem;
+            }
+
+            p{
+                margin:30px 0px;
+                font-size: 1rem;
+                font-weight: 350;
+            }
+
+            img{
+                margin: 40px 0px;
+                width: 95vw;
+                height: 40vh;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    @include mobile{
+        .about_info{
+            padding: 50px 10px 0px 30px;
+            margin:0px 20px 30px 20px;
+            display: flex;
+            flex-direction: column;
+            width: 80vw;
+            color:white;
+            text-align: center;
+            font-weight: 200;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+
+            h1{
+                margin: 50px 0px 0px 0px;
+                font-size: 1.7rem;
+            }
+
+            button{
+            background-color: $secondaryColor;
+            border:1.4px solid white;
+            color:white;
+            padding: 12px 32px;
+            border-radius: 10px;
+
+            }
+            span{
+                font-size:0.9rem;
+            }
+
+            p{
+                margin:30px 0px;
+                font-size: 1rem;
+                font-weight: 350;
+            }
+
+            img{
+                margin: 40px 0px;
+                width: 95vw;
+                height: 40vh;
+                border-radius: 20px;
+                object-fit: cover;
+            }
+        }
+    }
+
+}
+//Testimonial Section 
+.testimonial{
+
+    @include desktop{
+        .testimonials_info{
+            text-align: center;
+            
+            margin:20px 0px;
+            p{
+                margin:20px 0px 40px 0px;
+            }
+        }
+        padding: 50px 20px;
+        .testimonials_content{
+            padding: 30px 50px;
+            border-top-left-radius: 50px ;
+            border-bottom-right-radius: 50px ;
+            background-color: $secondaryColor;
+            text-align: center;
+            color:black;
+            margin:0px 0px 50px 0px;
+            img{
+                margin: 20px 0px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+
+        }
+    }
+
+    @include mobile{
+        .testimonials_info{
+            text-align: center;
+
+            margin:20px 0px;
+            p{
+        
+                margin:20px 0px 30px 0px;
+            }
+        }
+        padding: 50px 20px;
+        .testimonials_content{
+            padding: 30px 50px;
+            border-top-left-radius: 50px ;
+            border-bottom-right-radius: 50px ;
+            background-color: $secondaryColor;
+            text-align: center;
+            color:black;
+            margin:0px 0px 50px 0px;
+            p{
+                font-size: 0.9rem;
+            }
+            img{
+                margin: 20px 0px;
+                width: 100px;
+                height: 100px;
+                object-fit: cover;
+                border-radius: 50px;
+            }
+
+        }
+    }
+}
+//Contact Section
+.contact{
+
+    @include desktop{
+
+        background-color: $secondaryColor;
+        border-top-left-radius: 50px;
+        text-align: center; 
+        height: 103vh;
+        justify-content: center; 
+    
+    .header-text{
+       text-align: center;
+        margin: 0 auto; 
+        width: 94vw;
+        padding:50px 20px 0px 20px;
+        line-height: 2.5;
+        color: white;
+        height: 10vh;
+
+    }
+
+   
+    .container-contact{
+
+     justify-self: center;
+
+    }
+
+    .contact-table{
+        align-content: center;
+        width: 50vw;
+        text-align: left;
+        line-height: 2;
+        color: $primaryColor;
+        height: 35vh;
+        margin:40px 0px 100px 0px;    
+
+
+        input{
+            width: 50vw;
+            border:none;
+            height: 40px; 
+            border-radius: 4px; 
+            padding:10px 10px;
+            margin: 15px 0px;
+            
+        }
+
+        textarea{
+            margin: 15px 0px;
+            padding:10px 10px;
+            width: 50vw;
+            border:none;
+            height: 90px; 
+            border-radius: 4px; 
+        }
+        
+        button{
+            
+            background-color: white;
+            border: none;
+            padding: 12px 30px;
+            margin: 10px 0px;
+            border-radius: 8px;
+            font-size: 1rem;  
+
+    
+          
+            
+        }
+        input::placeholder, textarea::placeholder {
+            color: $dark ; 
+            opacity: 1; 
+        }
+    }
+
+
+
+    .contact-details{
+      
+        margin:0px 0px;
+        display: flex;
+        flex-direction: row;
+        gap:45px;
+        line-height: 2.2;
+        justify-content: center;
+        color: white;
+        img{
+            width: 33px;
+            height: 31px;
+       
+        }
+        h1{
+            font-size: 1.1rem;
+            font-weight: 800;
+
+  
+        }
+        p{
+            font-size: 0.8rem;
+        }
+    }
+}
+
+    
+@include tablet{
+
+    background-color: $secondaryColor;
+    border-top-left-radius: 50px;
+    text-align: center; 
+    height: 135vh;
+    justify-content: center; 
+
+.header-text{
+   text-align: center;
+    margin: 0 auto; 
+    width: 94vw;
+    padding:50px 20px 20px 20px;
+    line-height: 2.5;
+    color: white;
+    height: 10vh;
+    font-size: 1rem;
+}
+
+
+.container-contact{
+
+    justify-self: center;
+
+}
+
+.contact-table{
+    align-content: center;
+    width: 70vw;
+    text-align: left;
+    line-height: 2;
+    color: $primaryColor;
+    height: 35vh;
+    margin:5px 0px 0px 0px;    
+
+
+    input{
+        width: 70vw;
+        border:none;
+        height: 40px; 
+        border-radius: 4px; 
+        padding:10px 10px;
+        margin: 15px 0px;
+        
+    }
+
+    textarea{
+        margin: 15px 0px;
+        padding:10px 10px;
+        width: 70vw;
+        border:none;
+        height: 90px; 
+        border-radius: 4px; 
+    }
+    
+    button{
+        
+        background-color: white;
+        border: none;
+        padding: 12px 30px;
+        margin: 10px 0px;
+        border-radius: 8px;
+        font-size: 1rem;  
+
+
+      
+        
+    }
+    input::placeholder, textarea::placeholder {
+        color: $dark ; 
+        opacity: 1; 
+    }
+}
+
+
+
+.contact-details{
+  
+    margin:0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    line-height: 2.2;
+    justify-content: center;
+    color: white;
+    img{
+        width: 33px;
+        height: 31px;
+   
+    }
+    h1{
+        font-size: 0.9rem;
+        font-weight: 800;
+
+
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+}
+
+@include medium-screen{
+
+    background-color: $secondaryColor;
+    border-top-left-radius: 50px;
+    text-align: center; 
+    height: 138vh;
+    justify-content: center; 
+
+.header-text{
+   text-align: center;
+    margin: 0 auto; 
+    width: 94vw;
+    padding:50px 20px 20px 20px;
+    line-height: 2.5;
+    color: white;
+    height: 10vh;
+    font-size: 1rem;
+}
+
+
+.container-contact{
+
+    justify-self: center;
+
+}
+
+.contact-table{
+    align-content: center;
+    width: 70vw;
+    text-align: left;
+    line-height: 2;
+    color: $primaryColor;
+    height: 20vh;
+    margin:100px 0px 190px 0px;    
+
+
+    input{
+        width: 70vw;
+        border:none;
+        height: 40px; 
+        border-radius: 4px; 
+        padding:10px 10px;
+        margin: 15px 0px;
+        
+    }
+
+    textarea{
+        margin: 15px 0px;
+        padding:10px 10px;
+        width: 70vw;
+        border:none;
+        height: 90px; 
+        border-radius: 4px; 
+    }
+    
+    button{
+        
+        background-color: white;
+        border: none;
+        padding: 12px 30px;
+        margin: 10px 0px;
+        border-radius: 8px;
+        font-size: 1rem;  
+
+
+      
+        
+    }
+    input::placeholder, textarea::placeholder {
+        color: $dark ; 
+        opacity: 1; 
+    }
+}
+
+
+
+.contact-details{
+  
+    margin:7    0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    line-height: 2.2;
+    justify-content: center;
+    color: white;
+    img{
+        width: 33px;
+        height: 31px;
+   
+    }
+    h1{
+        font-size: 0.9rem;
+        font-weight: 800;
+
+
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+}
+
+@include medium-large-screen{
+
+    background-color: $secondaryColor;
+    border-top-left-radius: 50px;
+    text-align: center; 
+    height: 135vh;
+    justify-content: center; 
+
+.header-text{
+   text-align: center;
+    margin: 0 auto; 
+    width: 94vw;
+    padding:50px 20px 20px 20px;
+    line-height: 2.5;
+    color: white;
+    height: 10vh;
+    font-size: 1rem;
+}
+
+
+.container-contact{
+
+    justify-self: center;
+
+}
+
+.contact-table{
+    align-content: center;
+    width: 70vw;
+    text-align: left;
+    line-height: 2;
+    color: $primaryColor;
+    height: 20vh;
+    margin:100px 0px 190px 0px;    
+
+
+    input{
+        width: 70vw;
+        border:none;
+        height: 40px; 
+        border-radius: 4px; 
+        padding:10px 10px;
+        margin: 15px 0px;
+        
+    }
+
+    textarea{
+        margin: 15px 0px;
+        padding:10px 10px;
+        width: 70vw;
+        border:none;
+        height: 90px; 
+        border-radius: 4px; 
+    }
+    
+    button{
+        
+        background-color: white;
+        border: none;
+        padding: 12px 30px;
+        margin: 10px 0px;
+        border-radius: 8px;
+        font-size: 1rem;  
+
+
+      
+        
+    }
+    input::placeholder, textarea::placeholder {
+        color: $dark ; 
+        opacity: 1; 
+    }
+}
+
+
+
+.contact-details{
+  
+    margin:50px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    line-height: 2.2;
+    justify-content: center;
+    color: white;
+    img{
+        width: 33px;
+        height: 31px;
+   
+    }
+    h1{
+        font-size: 0.9rem;
+        font-weight: 800;
+
+
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+}
+    
+@include mobile{
+
+    background-color: $secondaryColor;
+    border-top-left-radius: 50px;
+    text-align: center; 
+    height: 137vh;
+    justify-content: center; 
+
+.header-text{
+   text-align: center;
+    margin: 0 auto; 
+    width: 94vw;
+    padding:50px 20px 0px 20px;
+    line-height: 2.5;
+    color: white;
+    height: 10vh;
+    font-size: 1rem;
+
+}
+
+
+.container-contact{
+
+    justify-self: center;
+
+}
+
+.contact-table{
+    align-content: center;
+    width: 70vw;
+    text-align: left;
+    line-height: 2;
+    color: $primaryColor;
+    height: 35vh;
+    margin:50px 0px 40px 0px;    
+
+
+    input{
+        width: 70vw;
+        border:none;
+        height: 40px; 
+        border-radius: 4px; 
+        padding:10px 10px;
+        margin: 15px 0px;
+        
+    }
+
+    textarea{
+        margin: 15px 0px;
+        padding:10px 10px;
+        width: 70vw;
+        border:none;
+        height: 90px; 
+        border-radius: 4px; 
+    }
+    
+    button{
+        
+        background-color: white;
+        border: none;
+        padding: 12px 30px;
+        margin: 10px 0px;
+        border-radius: 8px;
+        font-size: 1rem;  
+
+
+      
+        
+    }
+    input::placeholder, textarea::placeholder {
+        color: $dark ; 
+        opacity: 1; 
+    }
+}
+
+
+
+.contact-details{
+  
+    margin:0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap:35px;
+    line-height: 2.2;
+    justify-content: center;
+    color: white;
+    img{
+        width: 33px;
+        height: 31px;
+   
+    }
+    h1{
+        font-size: 0.9rem;
+        font-weight: 800;
+
+
+    }
+    p{
+        font-size: 0.8rem;
+    }
+}
+}
+
+}
+//Product Section
+.product{
+
+
+
+    @include desktop{
+        margin: 200px 300px;
+        background-color: $secondaryColor;
+
+        
+        .header-product-text h1{
+            color:white;
+            text-align: center;
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin: 20px 0px;
+        }
+
+        .header-product-text p{
+            color:white;
+            text-align: center;
+            font-size: 1.1rem;
+         
+        }
+
+        .product-content{
+            background-color: white;
+            padding: 20px;
+            margin: 60px 100px 100px 100px;
+            border-radius: 50px;
+            align-items: center;
+            h1{ 
+                font-weight: 800; 
+                color: $secondaryColor;
+                font-size:1.2rem;
+              
+            }
+            p{
+                margin:10px 0px;
+                
+            }
+            .right-text-pr{ text-align: left;}
+            .left-text-pr{text-align: right;}
+
+        }
+    }
+
+    @include mobile{
+        margin: 200px 300px;
+        background-color: $secondaryColor;
+
+        
+        .header-product-text h1{
+            color:white;
+            text-align: center;
+            font-weight: 800;
+            font-size: 2.5rem;
+            margin: 20px 0px;
+        }
+
+        .header-product-text p{
+            color:white;
+            text-align: center;
+            font-size: 1.1rem;
+         
+        }
+
+        img{
+            height: 40vh;
+            margin-left: 60px;
+        }
+        .product-content{
+            background-color: white;
+            padding: 20px;
+            margin: 60px 40px 100px 40px;
+            border-radius: 50px;
+            align-items: center;
+            h1{ 
+                font-weight: 800; 
+                color: $secondaryColor;
+                font-size:1.2rem;
+              
+            }
+            p{
+                margin:10px 0px;
+                
+            }
+            .right-text-pr{ text-align: center;}
+            .left-text-pr{text-align: center;}
+
+        }
+    }
+}
+//Hemmorhoid info Section
+
+.hemmorhoid{
+    background-color: $secondaryColor;
+    text-align: left;
+    @include desktop{
+
+        .hem_info{
+            color:white;
+        }
+        text-align: center;
+        .hem_info h1{
+            margin: 70px 50px 50px 50px;
+        }
+
+        .grouped-hem{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 350px;
+        }
+        .info_box_hem{
+            border-radius: 11px;
+            padding: 18px 0px;
+     
+            gap: 390px;
+         
+            justify-content: center;
+            background-color: $mediumLight;
+            margin: 20px 200px;  
+        }
+
+        .toggle-btn {
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-right: 10px;     
+        }
+
+        .info_box.visible {
+            max-height: 200px;     padding: 15px; 
+            
+        }
+
+        .info_box {
+            display: flex;
+            flex-direction: column;
+            max-height: 0; 
+            overflow: hidden; 
+     
+            padding: 0;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+    }
+    @include tablet{
+      
+        .hem_info{
+            color:white;
+        }
+        text-align: center;
+        .hem_info h1{
+       
+            margin: 60px 50px 50px 50px;
+        }
+
+        .grouped-hem{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 110px;
+        }
+        .info_box_hem{
+            border-radius: 11px;
+            padding: 18px 0px;
+     
+            gap: 300px;
+         
+            justify-content: center;
+            background-color: $mediumLight;
+            margin: 20px 100px;  
+        }
+
+        .toggle-btn {
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-right: 10px;     
+        }
+
+        .info_box.visible {
+            max-height: 200px;     padding: 15px; 
+            
+        }
+
+        .info_box {
+            display: flex;
+            flex-direction: column;
+            max-height: 0; 
+            overflow: hidden; 
+     
+            padding: 0;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+    }
+
+
+    @include hemorrhoid-display-xl-1{
+        .info-heading{
+        h1{
+            font-size: 0.8rem;
+        }
+        }
+        .hem_info{
+      
+        }
+        text-align: center;
+        
+        .hem_info h1{
+ 
+            margin: 60px 50px;
+        }
+
+        .grouped-hem{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap:30%;
+        }
+        .info_box_hem{
+            border-radius: 11px;
+            padding: 18px 0px;
+
+            gap: 200px;
+         
+            justify-content: center;
+            background-color: $mediumLight;
+            margin: 20px 190px;  
+
+            h3{
+                font-size: 1.1rem;
+                padding-left: 20px;
+            }
+        }
+
+        .toggle-btn {
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-right: 10px;     
+        }
+
+        .info_box.visible {
+            max-height: 200px;     padding: 15px; 
+            
+        }
+
+        .info_box {
+            display: flex;
+            flex-direction: column;
+            max-height: 0; 
+            overflow: hidden; 
+     
+            padding: 0;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+    }
+
+    @include mobile{
+
+        .hem_info{
+            color:white;
+        }
+        text-align: center;
+        .hem_info h1{
+            margin: 50px 0px 50px 0px;
+        }
+
+        .grouped-hem{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .info_box_hem{
+            border-radius: 11px;
+            padding: 18px 0px;
+     
+
+         
+            justify-content: center;
+            background-color: $mediumLight;
+            margin: 20px 20px;  
+
+            h3{
+                font-size: 0.8rem;
+                text-align: left;
+                padding-left:20px;
+            }
+            p{
+                text-align: left;
+            }
+        }
+
+        .toggle-btn {
+            background-color: $secondaryColor;
+            border-radius: 10px;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: 16px;
+            margin-right: 10px;     
+        }
+
+        .info_box.visible {
+            
+            max-height: 270px;     
+            padding: 10px 20px; 
+            
+        }
+
+        .info_box {
+            display: flex;
+            flex-direction: column;
+            max-height: 0; 
+            overflow: hidden; 
+     
+            padding: 0;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+    }
+
+}
+//featured video
+.featured-video{
+ 
+    .video-container{
+        margin: 20px 40px 50px 40px;
+    }
+
+    @include desktop{
+    padding: 40px 150px;
+  
+    text-align: center;
+
+
+    h1{
+        margin: 20px 0px 50px 0px;
+    }
+
+    video{
+        border-radius: 50px;
+    }
+
+
+
+}
+
+    @include mobile{
+        padding: 40px 0px;
+
+        .video-container{
+            margin: 20px 40px 40px 40px;
+        }
+    }
+}
+//footer
+footer{
+    background-color: $secondaryColor;
+
+    .companyfooter{
+       margin:20px 0px 0px 0px;
+    }
+    padding: 40px 10px;
+
+    border-top-left-radius:50px ;
+    border-top-right-radius:50px ;
+    h1{   
+         text-align: center; 
+        font-size: 18px; 
+    color:white;}
+}
+.social-medias{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    color:white;
+
+    .fab{
+        font-size: 25px;
+        width: 10vw;
+        height:auto;
+    }
+    
+}
