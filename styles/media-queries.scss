@@ -1,0 +1,46 @@
+@mixin tablet{
+    @media screen and (max-width:768px){
+        @content;
+    }
+    
+}
+
+@mixin desktop{
+    @media screen and (max-width: 1200px){
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: 412px) {
+        @content;
+    }
+}
+
+@mixin medium-screen {
+    @media screen and (min-width: 413px) and (max-width: 585px) {
+        @content;
+    }
+}
+
+@mixin medium-large-screen {
+    @media screen and (min-width: 769px) and (max-width: 783px) {
+        @content;
+    }
+}
+
+@mixin medium-larger-screen-fix {
+    @media screen and (min-width: 783px) and (max-width: 993px) {
+        @content;
+    }
+}
+
+@mixin hemorrhoid-display-xl-1{
+    @media screen and (min-width: 779px) and (max-width: 1194px) {
+        @content;
+    }
+}
+
+
+
+
